@@ -7,13 +7,17 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 const expressWs = require('express-ws')(app);
+const gWss = expressWs.getWss('/');
 
 app.use(express.json());
 app.ws('/', function(ws, req){
     //метод on слушает сообщение
     ws.on('message', function(msg){
         console.log(msg);
-        ws.send(msg);
+        //ws.send(msg); // отправка сообщения для 1 клиента
+        gWss.clients.forEach(client => {
+            client.send(msg);
+        });
     });
     console.log('socket', req.testing);
 });
