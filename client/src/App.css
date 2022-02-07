@@ -36,3 +36,11 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+.roomContainer {
+  display: flex;
+  justify-content: space-between;
+  min-width: 70vw;
+}
+

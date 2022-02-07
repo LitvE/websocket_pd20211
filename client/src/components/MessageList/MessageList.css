@@ -1,0 +1,7 @@
+.msgList{
+    margin: 0 10px;
+    min-height: 70vh;
+    background-color: white;
+    color: darkblue;
+    flex: 1;
+}
