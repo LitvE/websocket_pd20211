@@ -145,10 +145,10 @@ class App extends React.Component {
     emitMessage(currentRoom, message);
     this.setState({message: ''});
   }
- /*
+ 
   handleWs = () => {
     socket.off();
-  };*/
+  };
 
   render(){
     // return (
@@ -175,9 +175,9 @@ class App extends React.Component {
             <input type="textarea" value={message} onChange={this.handdleChangeMessage}/>
             <button onClick={this.sendMessage}>Send</button>
           </div>
-          {/* <div>
+          <div>
             <button onClick={this.handleWs}>Switch off</button>
-          </div> */}
+          </div>
       </>
     );
   }

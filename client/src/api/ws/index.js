@@ -1,6 +1,6 @@
 import io from 'socket.io-client';
 
-const socket = io('ws://localhost:3000', { transports: ['websocket', 'polling', 'flashsocket'] });
+const socket = io('ws://localhost:3000');
 
 
 export default socket;
